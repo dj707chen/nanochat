@@ -12,3 +12,29 @@ eval_bundle/
 .claude
 CLAUDE.md
 wandb/
+
+*.pth
+.venv
+.claude
+.idea
+
+data/
+
+target/
+.bsp/
+.idea/
+# vim
+*.sw?
+*.iml
+
+# Ignore [ce]tags files
+tags
+
+# Metals
+.metals
+.bloop
+.scala-build
+metals.sbt
+.vscode
+
+.DS_Store

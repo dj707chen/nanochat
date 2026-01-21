@@ -108,7 +108,14 @@ def download_single_file(index):
 
     return False
 
+""" How to run:
+    cd ~/AI/AndrejKarpathy/nanochat
+    uv run python -m nanochat.dataset -n 10 -w 2    # Download 10 file, 2 workers
 
+How __name__ is assigned a value: The value of __name__ changes depending on the execution context: 
+    When the file is run directly: If you execute the script as the main program from the command line (e.g., python my_script.py), the Python interpreter sets the __name__ variable to the string "__main__".
+    When the file is imported as a module: If the file is imported into another script (e.g., import my_script), the __name__ variable is set to the module's actual name (which is typically the filename without the .py extension, e.g., "my_script").
+"""
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download FineWeb-Edu 100BT dataset shards")
     parser.add_argument("-n", "--num-files", type=int, default=-1, help="Number of shards to download (default: -1), -1 = disable")
